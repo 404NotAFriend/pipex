@@ -6,7 +6,7 @@
 /*   By: bramalho@student.42porto.com <bramalho>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 06:37:07 by bramalho@st       #+#    #+#             */
-/*   Updated: 2026/01/29 15:34:14 by bramalho@st      ###   ########.fr       */
+/*   Updated: 2026/01/29 18:29:51 by bramalho@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ typedef struct s_pipex
 {
 	char	**envp;
 	char	**av;
+	char	**cmd_paths;
 	char	**cmd_args;
 	char	*cmd_path;
 	int		ac;

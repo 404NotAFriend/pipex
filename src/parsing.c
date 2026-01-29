@@ -6,7 +6,9 @@
 /*   By: bramalho@student.42porto.com <bramalho>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 15:00:13 by bramalho@st       #+#    #+#             */
-/*   Updated: 2026/01/29 15:00:14 by bramalho@st      ###   ########.fr       */
+/*   Updated: 2026/01/29 18:32:15 by bramalho@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../includes/pipex.h"
 
