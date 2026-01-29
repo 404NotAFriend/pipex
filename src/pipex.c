@@ -6,13 +6,14 @@
 /*   By: bramalho@student.42porto.com <bramalho>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 06:36:49 by bramalho@st       #+#    #+#             */
-/*   Updated: 2026/01/29 14:59:58 by bramalho@st      ###   ########.fr       */
+/*   Updated: 2026/01/29 18:36:22 by bramalho@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/pipex.h"
 
-int main(int argc, char** argv)
+/*int	main(int argc, char **argv)
 {
 
 }
+*/

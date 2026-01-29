@@ -6,7 +6,7 @@
 /*   By: bramalho@student.42porto.com <bramalho>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 15:02:00 by bramalho@st       #+#    #+#             */
-/*   Updated: 2026/01/29 18:31:54 by bramalho@st      ###   ########.fr       */
+/*   Updated: 2026/01/29 19:05:58 by bramalho@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	close_fds(t_pipex *data)
 
 void	parents_free(t_pipex *data)
 {
-	int i;
+	int	i;
 
 	close_fds(data);
 	i = 0;

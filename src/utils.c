@@ -6,7 +6,7 @@
 /*   By: bramalho@student.42porto.com <bramalho>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 15:05:28 by bramalho@st       #+#    #+#             */
-/*   Updated: 2026/01/29 17:21:49 by bramalho@st      ###   ########.fr       */
+/*   Updated: 2026/01/29 18:35:15 by bramalho@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	open_file(char *file, int mode)
 		fd = open(file, O_WRONLY | O_CREAT | O_APPEND, 0644);
 	if (fd == -1)
 		msg_error(file);
-	return(fd);
+	return (fd);
 }
 
 void	msg_error(char *str)
