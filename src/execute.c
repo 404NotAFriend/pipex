@@ -6,7 +6,7 @@
 /*   By: bramalho@student.42porto.com <bramalho>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 15:00:33 by bramalho@st       #+#    #+#             */
-/*   Updated: 2026/02/02 19:49:19 by bramalho@st      ###   ########.fr       */
+/*   Updated: 2026/02/02 20:33:31 by bramalho@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,17 @@ static char	*get_cmd(char **paths, char *cmd)
 	return (NULL);
 }
 
-void exec(t_pipex *data)
+void	exec(t_pipex *data)
 {
-
+	data->cmd_args = ft_split(data->av[data->i], ' ');
+	data->cmd_path = get_cmd(data->cmd_paths, data->cmd_args[0]);
+	if (!data->cmd_path)
+	{
+		ft_putstr_fd("pipex: command not found: ", 2);
+		ft_putendl_fd(data->cmd_args[0], 2);
+		parent_free(data);
+		exit(127);
+	}
+	if (execve(data->cmd_path, data->cmd_args, data->envp) == -1)
+		msg_error("pipex: execve failed");
 }

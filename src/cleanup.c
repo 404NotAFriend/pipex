@@ -6,7 +6,7 @@
 /*   By: bramalho@student.42porto.com <bramalho>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 15:02:00 by bramalho@st       #+#    #+#             */
-/*   Updated: 2026/01/29 19:05:58 by bramalho@st      ###   ########.fr       */
+/*   Updated: 2026/02/02 20:30:07 by bramalho@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	close_fds(t_pipex *data)
 		close(data->pipe_fd[1]);
 }
 
-void	parents_free(t_pipex *data)
+void	parent_free(t_pipex *data)
 {
 	int	i;
 
