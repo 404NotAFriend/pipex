@@ -6,7 +6,7 @@
 /*   By: bramalho@student.42porto.com <bramalho>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 15:02:00 by bramalho@st       #+#    #+#             */
-/*   Updated: 2026/02/02 20:30:07 by bramalho@st      ###   ########.fr       */
+/*   Updated: 2026/02/03 02:37:49 by bramalho@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,28 @@ void	close_fds(t_pipex *data)
 		close(data->pipe_fd[1]);
 }
 
+void	child_free(t_pipex *data)
+{
+	int	i;
+
+	i = 0;
+	if (data->cmd_args)
+	{
+		while (data->cmd_args[i])
+		{
+			free(data->cmd_args[i]);
+			i++;
+		}
+		free(data->cmd_args);
+	}
+	if (data->cmd_path)
+		free(data->cmd_path);
+}
+
 void	parent_free(t_pipex *data)
 {
 	int	i;
 
-	close_fds(data);
 	i = 0;
 	if (data->cmd_args)
 	{
@@ -40,7 +57,7 @@ void	parent_free(t_pipex *data)
 		free(data->cmd_args);
 	}
 	i = 0;
-	if (data->cmd_paths[i])
+	if (data->cmd_paths)
 	{
 		while (data->cmd_paths[i])
 		{

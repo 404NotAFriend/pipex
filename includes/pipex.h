@@ -87,8 +87,11 @@ char	*get_next_line(int fd);
 /*                              CLEANUP & EXIT                                */
 /* ========================================================================== */
 
+void	child_free(t_pipex *data);
 void	parent_free(t_pipex *data);
 void	close_fds(t_pipex *data);
+void	setup_output_redirect(int outfile_fd);
+void	setup_input_redirect(int infile_fd);
 void	msg_error(char *str);
 
 #endif
