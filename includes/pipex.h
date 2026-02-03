@@ -6,7 +6,7 @@
 /*   By: bramalho@student.42porto.com <bramalho>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 06:37:07 by bramalho@st       #+#    #+#             */
-/*   Updated: 2026/02/03 00:31:18 by bramalho@st      ###   ########.fr       */
+/*   Updated: 2026/02/03 00:37:34 by bramalho@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ void	exec(t_pipex *data);
 /* ========================================================================== */
 
 void	here_doc(char *limiter, int ac);
-char    *get_next_line(int fd);
+char	*get_next_line(int fd);
 
 /* ========================================================================== */
 /*                              CLEANUP & EXIT                                */
