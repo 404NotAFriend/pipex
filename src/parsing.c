@@ -6,7 +6,7 @@
 /*   By: bramalho@student.42porto.com <bramalho>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 15:00:13 by bramalho@st       #+#    #+#             */
-/*   Updated: 2026/01/29 19:20:57 by bramalho@st      ###   ########.fr       */
+/*   Updated: 2026/02/02 23:47:09 by bramalho@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	parse_cmds(t_pipex *data)
 	data->cmd_paths = ft_split(path_env, ':');
 	if (!data->cmd_paths)
 	{
-		parents_free(data);
+		parent_free(data);
 		msg_error("Pipex: Malloc failed");
 	}
 }
